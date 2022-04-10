@@ -8,6 +8,52 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
+<script>
+    let x = 2022;
+    //console.log("hola mundo es el año: "+x);  //esto tiene que ver para poder hacer una llamada directa a la consola del navegador y desplegar el proceso ahi
+    //alert("hola mundo es el año: "+x);        //esto es una manera de deplegar de manera mas grafica por medio del navegador un mensaje flotante que pueda ver el usuario sin tener que usar la teminal
+
+    function suma(a,b) {    //declaracion a una funcion para poder hacer la operacion pertinete
+        return a+b;        
+    }
+
+    let suma1 = function(a,b){
+        return a+b;
+    } 
+
+    let suma2 = (a,b) => {      //esta es una menera que poder generar una funcionnflecha que no es necesario tener la palabra funcion e igual es una manera mujy corta de hacerlo sin tener que declarar nada mas
+        return a+b;
+    }
+    
+    const anonima = function(){
+        alert("funcion anonima");       //esta es una manera alternativa para poder crear una fucion anonima para poder tener en cuanta el querer solo hacer un pequeño procesos que se puede hacer de manera mas sencilla
+    }
+
+    alert(suma(4,9));       //llamada a la funcion por medio del alert que va a mostrar el resultado que nosostros deseamos
+    alert(suma1(2,3));
+    alert(suma2(3,7));
+    //alert(anonima);         //este sistema sirve para poder mandar toda la cadena de la funcion a la cual se encuentra inicializada la variable en cuastion
+    //alert(anonima());       //este sirve para poder mandar a llamar solo lo que se encuentra dentro de la fuancion que se esta realizando
+
+    let cadena = "bienvenidos a ESCOM"
+    let longcadena = () =>{
+        alert("la longitud de la variable cadena es de: " + cadena.length);      //Esta fucion esta hecha para poder obtener el valor de longitud de la cadena
+    }
+
+    longcadena();
+
+    let mayuscadena = () =>{
+        alert(cadena.toUpperCase());        //esta funcion esta para poder hacer que las cadenas que le mandemos pueden cambiar a mayusculas
+    } 
+
+    mayuscadena();
+
+    let i = 3;
+    let miArreglo = ["escom", "upitta", "upiicsa", "upibi", "esime"];
+    console.log("Esta es la manera en la que podemos imprimir los elementos del areglo: " + miArreglo[i] + " numero del indice: " + i);
+
+
+</script>
 </head>
 <body>
     
