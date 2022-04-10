@@ -16,6 +16,12 @@
         oferta:["ISC", "IIA", "LC"],    //se puede tener arreglos de datos en el mismo, NOTA: chacar el como se usan los arreglos en js
         m: function(){      // ademas de eso como vimos se puede tener funciones anonimas por este medio, se intento por metodo flecha pero lo mejor es este medio de declaracion
             return this.nombre + " " + this.fundacion
+        },
+        o:{
+            nombre1: "UPPITA",
+            año2: "1996",
+            director2: "Juan Perez",
+            oferta2:["SIS", "OLA"]
         }
     };
 
@@ -23,6 +29,9 @@
 
     alert(miObjeto.oferta[1]);      //esta es la manera para poder hacer la llamada a los datos en la funcion
     alert(aux);
+    alert(miObjeto.o.oferta2[1]);   //esta es la manera en la que podemos podemos mandar a llamar una funcion que tiene como ayuda el poder llamar un objeto dentro de otro. @que raro
+
+    alert(miObjeto["o"]["año2"]);   //con esto podemos elegir de manera de arrglo el elemento que queremos dar 
 
     //NOTA: los objetos en js tiene mucha similitud con el sistema de estructuras en C y otras
 
