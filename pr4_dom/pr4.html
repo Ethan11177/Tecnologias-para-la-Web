@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Practica 4 DOM</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    
+    <p id = "x">Ejemplo de dom</p>
+    <a id = "enlace" href="">Web de Escom</a>
+
+</body>
+<script>
+    
+    //nota es este sistema podemos ver que por medio de DOM es un medio en el que podemos estructurar de mejor manera las paginas web para poder asi tener una descripcion mas certera
+    //donde podemos ver que el sistema de dom tiende a poner los scripts hasta el final del sistema en el curpo de encuentran las etiquiteas html, y al principio estas las clases de css para poder tener el diseño
+
+    /*
+    let x = document.getElementById("x");  //esto es para tener los elementos que estan dentro de una etiqueta que haga referencia a la id que manda a llamar
+    console.log(x);
+
+    let x1 = document.getElementsByTagName("body");     //este tiene como funcion obtener todos los elementos dentro de una etiqueta sin hacer referencia a la id
+    console.log(x1[0]);
+
+    let x2 = document.getElementById("x").innerHTML;    //este sirver para tener solo los elementos que estan dentro de la etiqueta sin toda la sentencia de declaracion
+    console.log(x2);
+
+    document.getElementById("x").innerHTML = "cambio de texto por medio de DOM"; //esta linea sirver para poder cambiar el elemento que esta dentro de la etiqueta que hacemos referencia por medio de la id
+    */
+
+    let x = document.getElementById("x");
+    
+    x.innerHTML = "ESCOM, IPN, 17_04_22";
+    document.getElementById("enlace").href = "https://www.escom.ipn.mx/"; //esta es la mejor manera para declar enlaces a otras paginsa pode medio de dom
+
+    let para = document.createElement("p");
+    let cont = document.createTextNode("hola mundo!!");
+
+    para.appendChild(cont);
+    para.style.color = "#00F099";
+    document.body.appendChild(para);
+
+    let eliminar = document.getElementById("x");
+    eliminar.parentNode.removeChild(eliminar);
+
+
+    
+
+</script>
+</html>

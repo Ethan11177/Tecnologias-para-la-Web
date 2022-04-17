@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Pracitca 5 JSON</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+<script>
+
+    let x = "hola mundo!!";
+
+    let json = {
+        cadena: "hola mundo",
+        numero: 35,
+        boleano: true,
+        arreglo: ["correr", "programar", "cocinar"],
+        objeto: {
+            twiter: "simon",
+            email: "tambien jsjsj"
+        },
+        nulo: null
+    }
+
+    //json es un trductor que se encarga de manera del parseo de datos haciendo una analisis de estos y despues mandandolos a el mismo sistema
+
+    console.log("{num: 1, nombre: emiliano}");
+    console.log(JSON.parse("{}"));              //la setencia de parse es la encargada de convertir un dato en un objeto dentro de js
+    console.log(JSON.stringify({}));            //la sentencia stringinfy se encarga de convertir los objetos a cadanas de texto
+    console.log("[1,2,3]");
+    console.log(JSON.parse("[1,2,3]"));
+    console.log(JSON.stringify([1,2,3]));
+    console.log("true");
+    console.log(JSON.parse("true"));
+    console.log(JSON.stringify(true));
+    console.log(x);
+    //sconsole.log(JSON.parse("x"));        //esta nos sirve para convertir caracteres en valores ya que nos es un objeto valido en js
+    console.log(JSON.stringify(x));
+
+
+    console.log(JSON.stringify(json));      //con esta idea vamos a convertir el objeto que declaramos en un json para luego usar json.parse y convertirlo en un js 
+
+    console.log(JSON.parse('{"cadena":"hola mundo","numero":35,"boleano":true,"arreglo":["correr","programar","cocinar"],"objeto":{"twiter":"simon","email":"tambian jsjsj"},"nulo":null}'));      //se tiene que usar comillas sencillas para poder introducir el objeto JSON
+
+</script>
+</html>
