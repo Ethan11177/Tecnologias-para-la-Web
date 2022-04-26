@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Ejercisio 25/04</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <table border="5pt">
+        <thead>
+            <tr>
+                <th>fecha</th>
+                <th>maxima</th>
+                <th>minima</th>
+                <th>icon</th>
+                <th>descripcion</th>
+                <th>humedad</th>
+                <th>viento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="fecha"></td>
+                <td id="maxima"></td>
+                <td id="minima"></td>
+                <td><img id="icono" src="" alt=""></td>
+                <td id="descripcion"></td>
+                <td id="humedad"></td>
+                <td id="viento"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    let jsclima = '{"day1": {"date": "2019-11-6", "temperature_max": 14, "temperature_min": 8, "icon": "7", "text": "Cubierto", "humidity": 56, "wind": 21, "wind_direction": "Oeste", "icon_wind": "O", "sunrise": "7:47", "sunset": "18:09", "moonrise": "15:42", "moonset": "01:39", "moon_phases_icon": "9"}}';
+    let clima = JSON.parse(jsclima);
+    let icon = clima.day1.icon;
+
+    console.log(clima);
+    console.log(clima.day1.temperature_min);
+    document.getElementById("minima").innerHTML = clima.day1.temperature_min+" °C";
+    document.getElementById("icono").setAttribute("src", "https://v5i.tutiempo.net/wi/02/50/"+ clima.day1.icon +".png");
+</script>
+</html>

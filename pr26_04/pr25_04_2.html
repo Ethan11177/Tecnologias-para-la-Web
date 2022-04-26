@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>clima 2 json</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./JSONclima.js"></script>
+<script src="./jquery_3.6.js"></script>
+<script src="./JSONparse.js"></script>
+</head>
+<body>
+    <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>fecha</th>
+                    <th>maxima</th>
+                    <th>minima</th>
+                    <th>icono</th>
+                </tr>
+            </thead>
+            <tbody id="txtclima">
+
+            </tbody>
+        </table>
+    </table>
+</body>
+<script>
+    $(document).ready(()=>{
+        let clima = JSON.parse(jsclima);
+        dias = getObjects(clima, 'temperature_max', '');
+        let txtclima = "";
+        //console.log(dias[0].date);
+
+        dias.forEach((item) => {
+
+            console.log("<tr><td>" + item.date + "</td><td>" + item.temperature_max + "</td><td>" + item.temperature_min + "</td><td>" + item.icon + "</td></tr>");
+
+            txtclima += "<tr><td>" + item.date + "</td><td>" + item.temperature_max + "</td><td>" + item.temperature_min + "</td><td><img src='https://v5i.tutiempo.net/wi/02/50/" + item.icon + ".png'/></td></tr>";
+        });
+        document.getElementById("txtclima").innerHTML = txtclima;
+    });
+</script>
+</html>

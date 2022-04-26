@@ -1,0 +1,1 @@
+let jsclima = '{"day1": {"date": "2019-11-6", "temperature_max": 14, "temperature_min": 8, "icon": "7", "text": "Cubierto", "humidity": 56, "wind": 21, "wind_direction": "Oeste", "icon_wind": "O", "sunrise": "7:47", "sunset": "18:09", "moonrise": "15:42", "moonset": "01:39", "moon_phases_icon": "9"}}';

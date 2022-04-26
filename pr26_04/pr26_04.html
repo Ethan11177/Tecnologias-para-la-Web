@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="./JSONclima.js"></script>
+<script src="./jquery_3.6.js"></script>
+</head>
+<body>
+    <table border="5pt">
+        <thead>
+            <tr>
+                <th>fecha</th>
+                <th>maxima</th>
+                <th>minima</th>
+                <th>icono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="fecha"></td>
+                <td id="max"></td>
+                <td id="min"></td>
+                <td id="icon"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    $(document).ready(() => {
+        let clima = JSON.parse(jsclima);
+        
+        document.getElementById("fecha").innerText = clima.day1.date;
+        document.getElementById("max").innerText = clima.day1.temperature_max;
+        document.getElementById("min").innerText = clima.day1.temperature_min;
+        document.getElementById("icon").innerHTML = "<img src='https://v5i.tutiempo.net/wi/02/50/" + clima.day1.icon + ".png'>";
+    });
+</script>
+</html>
