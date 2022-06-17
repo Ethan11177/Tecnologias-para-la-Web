@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <title>AJAX</title>
+ <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+ <script src="./jquery_3.6.js"></script>
+ <link href="" rel="stylesheet">
+ <script>
+     $(document).ready(()=>{
+         $.ajax({
+             method:"post",
+             url:"./ajax.php",
+             data: {usuario:"2020630533", contrasena:"qwerty", correo:"correo@correo.com"},
+             cache: false,
+             success:(respAX)=>{
+                 $("div#respAX").html(respAX)
+             }
+         });
+     });
+ </script>
+ </head>
+ <body>
+     <div id="respAX"></div>
+ </body>
+ </html>
